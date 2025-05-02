@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Your Contacts</h2>
+<a href="{% url 'add_contact' %}">Add New Contact</a>
+<form method="GET" action="">
+    <input type="text" name="q" placeholder="Search contacts..." value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+</form>
+<ul>
+    {% for contact in contacts %}
+        <li>
+            <strong>{{ contact.name }}</strong> - {{ contact.email }} - {{ contact.phone }}
+            [<a href="{% url 'update_contact' contact.id %}">Edit</a>] 
+            [<a href="{% url 'delete_contact' contact.id %}">Delete</a>]
+        </li>
+    {% empty %}
+        <li>No contacts found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
