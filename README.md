@@ -14,7 +14,7 @@ A simple web-based Contact Book built with Django. It allows users to register, 
 ### 1. Clone the project
 
 ```bash
-git clone https://github.com/your-username/contactbook.git
+git clone https://github.com/aleehamza25/contactbook.git
 cd contactbook
 ```
 ### 2. Create and activate a virtual environment
