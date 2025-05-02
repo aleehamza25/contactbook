@@ -18,18 +18,23 @@ git clone https://github.com/your-username/contactbook.git
 cd contactbook
 ```
 ### 2. Create and activate a virtual environment
-
+```bash
 python -m venv cb
-# On Windows:
+```
+### On Windows:
+```bash
 cb\Scripts\activate
-# On Mac/Linux:
+```
+### On Mac/Linux:
+```bash
 source cb/bin/activate
-
+```
+```bash
 pip install django
 
 python manage.py migrate
 
 python manage.py runserver
-
-##👤 Login Info
+```
+### Login Info:
 You can log in using the superuser credentials created above, or register a new user through the UI.
